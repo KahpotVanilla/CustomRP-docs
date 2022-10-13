@@ -1,6 +1,6 @@
-# 🏠 Home
+# 🏠 בית
 
-Welcome to the CustomRP docs!
+ברוכים הבאים למדריך של CustomRP!
 
 Please refer to [Releases](https://github.com/maximmax42/Discord-CustomRP/releases) link to download the app or to [Setting Up](setting-up.md) page for how to set the manager up.
 
