@@ -1,4 +1,4 @@
-# Table of contents
+# תוכן עניינים
 
 * [🏠 בית](README.md)
 * [🛠 הגדרה](setting-up.md)
