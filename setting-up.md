@@ -2,35 +2,45 @@
 description: RTFM
 ---
 
-# 🛠 Setting Up
+# 🛠️ Setting Up
 
 If you experience any errors, check out [FAQ](faq.md).
 
-Before setting up, make sure you have enabled activity status in Discord settings:&#x20;
+Before setting up, make sure you have a standalone Discord client (**not in browser**) and have enabled activity status in Discord settings:
 
-<figure><img src="https://user-images.githubusercontent.com/2225711/188219661-49713f90-fa76-4645-b04a-fc1bc0f029bd.png" alt=""><figcaption></figcaption></figure>
+![image](https://github.com/maximmax42/CustomRP-Docs/assets/2225711/a1b8cb1e-7f88-4061-b297-2691523718a5)
 
 ## Setup process
 
-* Go to https://discord.com/developers/applications/.
+* Open [Discord Developer portal](https://discord.com/developers/applications).
 * Click **New Application** in the upper right corner.
 
-![image](https://user-images.githubusercontent.com/2225711/161050202-c796103d-6712-401e-be96-3f3712512375.png)
+![](https://user-images.githubusercontent.com/2225711/161050202-c796103d-6712-401e-be96-3f3712512375.png)
 
 * Choose the name for the application, it will be displayed after "Playing" in the status; hit **Create**.
-* Copy the **Application ID** and paste it in Custom RP field **ID**, then press **Connect**. If done correctly, your status in Discord should now say "Playing **\[name of the app]**".
-  * Note: If you have a custom status set (the one with emoji), it will be prioritized over your CustomRP one. It will be seen in the profile popup though.
+* Copy the **Application ID** and paste it in Custom RP field **ID**, then press **Connect**.&#x20;
 
-![image](https://user-images.githubusercontent.com/2225711/161050341-8169af53-5d3f-44d6-b745-cc711e8d1476.png)
+![](https://user-images.githubusercontent.com/2225711/161050341-8169af53-5d3f-44d6-b745-cc711e8d1476.png)
 
-* On your application's page, navigate to Rich Presence -> Art Assets and upload at least one image under Rich Presence Assets if you want to use them. In CustomRP, there is a handy **Upload Assets** button in File menu (you can also use Ctrl+U) that will take you there if your ID field is set up properly.
-  * Alternatively, you can just insert a URL to the image in the **Key** field.
-  * Note: While you can name your asset with any name up to 999 symbols, the API will only accept names with 256 symbols max.
-* Navigate to Visualizer page to set up fields **State, Details, Large Image Key, Large Image Text, Small Image Key, Small Image Text, Party Size, Party Max**. All of those are optional.
-* After you've found the setup that pleases you, copy the values into CustomRP's corresponding fields.
-  * Tip: You can hover over almost any control in the app (including labels line **Details**) and it'll give you a tooltip!
-* If you want to set up buttons as well, fill in both Text and URL fields.
-  * Note: When you will click on the buttons in your own presence, they will not work, but don't worry, they will work for everyone else. It's a problem on Discord's side.
+* If done correctly, your status in Discord should now say "Playing **\[name of the app]**". In case of errors, check [FAQ](faq.md).
+  * The status will not show if you're in invisible mode.
+  * If you have a custom status set (the one with emoji), it will be prioritized over your CustomRP one. CustomRP status will be seen in the profile popup though.
+* Now you can fill the other fields (everything is optional):
+  * **Details**: First line in the presence under the app name.
+  * **State**: Second line in the presence. Will be first if Details is empty.
+  * **Party**: Shows up as `(X of Y)` after State line. If State is empty, Party count will not be shown.
+  * **Timestamp**: A timer that either counts to or from a specific timestamp. Displayed below Details and State as either `xx:xx:xx elapsed` or `xx:xx:xx left`. Can only show up to `23:59:59` before rolling over to `00:00`.
+  * **Big and small images**: Images that are shown on the left side of the presence. If both are present, small image is in the bottom right corner of the big one.
+    * **Key**: Either a direct URL (preferred, as you can also use GIFs that way) or an Art Asset name.
+      * _URL method:_ If your image is already on the internet, put the **direct link** (usually done by right clicking the image and choosing something like "Copy image link") in the field. If your image is on your PC, use any image hosting and sharing website (e.g. Imgur, ImageShack, etc). It's **not recommended** to upload images sent in Discord DMs/channels, as their links get too big too quickly and they expire in 2 weeks.
+        * If after connecting you get stuck on "Updating presence...", chances are the URL you've put was too long or was not a direct URL. If you're sure it's a direct one, use a URL shortner.
+      * _Art Asset method:_ On your application's page, navigate to Rich Presence -> Art Assets and upload at least one image under Rich Presence Assets. In CustomRP, there is a handy **Upload Assets** button in File menu (you can also use Ctrl+U) that will take you there if your ID field is set up properly.
+        * Note 1: Although usually the images become usable instantly, in some cases it might take up to several hours.
+        * Note 2: While you can name your asset with any name up to 999 symbols, the app will only accept names with 256 symbols max.
+    * **Text**: A text that appears when you hover over (or long tap on mobile) the image.
+  * **Buttons**:
+    * **Text**: A text displayed on the button.
+    * **URL**: A URL that the button will open upon clicking.
 * Hit **Update Presence** (or **Connect** if you aren't already connected).
 * Congratulations, you're wonderful!
 
@@ -44,7 +54,7 @@ If you have 2 accounts that you use at the same time and want for each of them t
 
 * Set up your main account first with the instructions above.
 * Grab the latest **portable (.zip)** version of CustomRP (either from [website](https://www.customrp.xyz) or [GitHub releases page](https://github.com/maximmax42/Discord-CustomRP/releases/latest)) and unpack it anywhere.
-  * This only works with versions 1.16 and older.
+  * This only works with versions 1.16 and newer.
 * Open `Start Second Instance.bat` or create a shortcut to CustomRP.exe with an argument `--second-instance` (or `-2`).
 * Set up the program the same way you did your main instance.
   * Tip: If you already have a preset you would want to use with your second instance, you can edit the bat file or the shortcut to include the path to the preset. Example: `CustomRP.exe -2 "C:\Some Folder\preset.crp"` (quotation marks around the path are necessary if the path has spaces in it).
