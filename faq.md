@@ -1,10 +1,16 @@
 ---
-description: Frequently asked questions
+description: Please stop asking me the same questions in the server.
 ---
 
-# ❓ FAQ
+# ❓ Frequently Asked Questions
 
 ## Questions
+
+### Is this a virus? My antivirus/VirusTotal/etc says there's a virus.
+
+No. CustomRP doesn't contain any viruses, the source code is available for everyone to check.
+
+You might be asking then, why do some antiviruses and VirusTotal say there's a virus? Mostly it's because my app a) isn't as popular to be considered trustworthy by Windows and some antiviruses, and b) isn't signed with a code signing certificate (because I'm Russian I currently can't even buy one, and if I could, they're pretty expensive).
 
 ### Can I add more than 2 buttons?
 
@@ -30,10 +36,6 @@ It opened up because you pressed Ctrl+Shift and clicked Connect button (or Ctrl 
 
 Before trying anything, make sure you are on the latest version of CustomRP!
 
-### When I click on presence buttons in my profile, they don't work.
-
-Buttons will not work for you on the desktop client you're using CustomRP with, it's a Discord's quirk. You can test your buttons from mobile or web client, or just ask someone else instead.
-
 ### I installed CustomRP but it doesn't start.
 
 This is most likely your antivirus preventing the app from launching. Add `%appdata%\CustomRP` folder to exceptions.
@@ -46,7 +48,7 @@ Kill the app in the Task Manager, delete `%localappdata%\maximmax42` folder, sta
 
 Make sure you have enabled activity status in Discord settings:
 
-<figure><img src="https://user-images.githubusercontent.com/2225711/188219661-49713f90-fa76-4645-b04a-fc1bc0f029bd.png" alt=""><figcaption></figcaption></figure>
+![image](https://github.com/maximmax42/CustomRP-Docs/assets/2225711/a1b8cb1e-7f88-4061-b297-2691523718a5)
 
 ### The app was working, but now it's connecting indefinitely.
 
@@ -54,7 +56,21 @@ You might have gotten a timeout from Discord because of connecting/changing pres
 
 ### The app says "Wrong ID?"/"Is Discord running?" or connects indefinitely even though I'm sure I did everything right and Discord is running.
 
-Sometimes this is caused by BetterDiscord. If you have it installed, uninstall it, let CustomRP connect to Discord at least once and then install BD back. If you don't, try running CustomRP as an administrator. If that doesn't help, try adding `%appdata%\CustomRP` or, in case you're using a portable version, the folder you extracted CustomRP to (and maybe Discord), to firewall/antivirus exceptions, and then restart your whole PC (you could try restarting just the Discord and CustomRP, but in 95% of the cases it doesn't work). Other thing you can try is to temporarily quit all the Discord clients but your main one. If that doesn't help, I never could figure out what causes this, sorry.
+Here are some things for you to try:
+- **Make sure you're running a standalone Discord client (not in browser).**
+- Restart your PC. Pro tip: restarting PC solves a lot of problems.
+- If you have BetterDiscord/Vencord/etc installed, uninstall it, let CustomRP connect to Discord at least once and then install it back.
+- If you use multiple Discord clients, temporarily quit all of them except the one you want the presence to be on.
+- Run CustomRP as administrator.
+- Add `%appdata%\CustomRP` or, in case you're using a portable version, the folder you extracted CustomRP to, to firewall and/or antivirus exceptions, then restart your whole PC.
+  - If you don't know whether you have an antivirus or not, you most likely do - Windows Defender is on every Windows 10/11 computer.
+- Reinstall Discord.
+
+If nothing helped, I can't suggest anything else, sorry.
+
+### The app is stuck on "Updating presence..."
+
+Check the image URLs, they're either too long, or not actually direct links.
 
 ### The app was working before, but then it crashed and now it doesn't launch at all.
 
@@ -64,4 +80,4 @@ Perhaps you have inserted a long string of fancy text (or text in a language tha
 
 If you are able to launch the app and get a crash report, and it says `System.IO.FileNotFoundException: Could not load file or assembly...`, please reinstall the app.
 
-If you can't find an answer to your question/problem, send a message to a `#support` channel on [CustomRP Discord server](https://www.customrp.xyz/discordserver), message maximmax42#5572 on Discord or [open an issue](https://github.com/maximmax42/Discord-CustomRP/issues/new/choose).
+If you can't find an answer to your question/problem, send a message to a `#support` channel on [CustomRP Discord server](https://www.customrp.xyz/discordserver), message maximmax42 on Discord or [open an issue](https://github.com/maximmax42/Discord-CustomRP/issues/new/choose).
