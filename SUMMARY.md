@@ -1,5 +1,5 @@
 # Table of contents
 
-* [🏠 Home](README.md)
-* [🛠 Setting Up](setting-up.md)
-* [❓ FAQ](faq.md)
+* [🏠 בית](README.md)
+* [🛠 הגדרה](setting-up.md)
+* [❓ שאלות ותשובות](faq.md)
